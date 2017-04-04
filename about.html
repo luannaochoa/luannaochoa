@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+	
+<head> 
+
+	<!--Meta tags --> 
+	<meta charset="utf-8">
+	<meta name="description" content="Luanna Ochoa is a student at Florida International University studying Computer Engineering." />
+	<meta name="keywords" content="Miami, Computer Engineer, Female, STEM" />
+	<meta name="author" content="Luanna Ochoa">
+	<meta name="robots" content="noindex, nofollow">
+	<title>About</title>
+
+	<!-- Linking JS, CSS or jQuery Here--> 
+	<!-- CSS -->
+	<link rel="stylesheet" href="stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">	
+	<!-- JS -->
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+	<!-- Jquery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+</head> 
+
+<body> 
+
+	<ul id="menu">
+	    <li>
+	        Menu 
+	        <ul>
+	            <li><i class="fa fa-fw fa-home"></i> <a href="index.html">Home</a><kbd>Ctrl+N</kbd></li>
+	            <li class="Enabled"><i class="fa fa-fw fa-child"></i> <a href="about.html">About</a><kbd>Ctrl+O</kbd></li>
+	            <li class="sub">
+	                <i class="fa fa-fw"></i> Work...
+	                <ul>
+	                    <li><i class="fa fa-fw fa-bar-chart-o"></i> <a href="skills.html">Skills</a></li>
+	                    <li><i class="fa fa-fw fa-list-ol"></i> <a href="experience.html">Experience</a></li>
+	                    <li><i class="fa fa-fw fa-book"></i> <a href="portfolio.html">Portfolio</a></li>
+	                </ul>
+	            </li>
+	            <li class="Enabled"><i class="fa fa-fw fa-envelope-o"></i> <a href="contact.html">Contact</a></li>
+	            <li class="divider"></li>
+	            <li><i class="fa fa-fw"></i> Quit<kbd>Ctrl+Q</kbd></li>
+	        </ul>
+	    </li>
+	    <li>
+	        Help
+	        <ul>
+	            <li class="toggle"><i class="fa fa-fw"></i> Glad to, contact me</li>
+	            <li><i class="fa fa-fw fa-envelope"></i> luannaochoa@gmail.com<kbd>F1</kbd></li>
+	        </ul>
+	    </li>
+	</ul>
+
+
+
+	<div class="shell-wrap">
+			<p class="shell-top-bar">/Users/LuannaOchoa/Documents/About/</p>
+			<div class="shell-body">
+
+					<div class="computer">			
+
+							<span><span class="green">LuannaOchoa</span>:<span class="purple">~</span>$ </span>cat Bio.txt<br/><br/>
+								<div class="aboutMe">
+									<p>
+									 I am Luanna Ochoa. I am 23 years old and study Computer Engineering at FIU. 
+									 <br >
+									 <br >
+									 Three things that describe me are:
+									 <ol>
+									 	<li><a href="https://twitter.com/ochoa_luanna">My Twitter</a></li>
+									 	<li><a href="https://docs.google.com/spreadsheets/d/1KRv8Y_JFGC9FKzvO6aD1oFXplKbfRomk1bZn9uz46TI/edit?usp=sharing">My Spreadsheets</a></li>
+									 	<li><a href="https://github.com/luannaochoa">My Github</a>
+
+									 </ol>
+									 <br />
+									 <br />
+									 
+									</p>
+								</div>
+			
+					</div>
+
+			</div>
+	</div>
+
+
+
+	<!-- Javascript for the Apple Menu --> 
+	<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+            $(document).ready(function () {
+                $('#menu').fileMenu({
+                    slideSpeed: 200
+                });
+            });
+	</script>
+
+
+	<!-- Tool tip JS --> 
+	<script type="text/javascript">
+		$(document).ready(function() {
+		// Tooltip only Text
+		$('.masterTooltip').hover(function(){
+		        // Hover over code
+		        var title = $(this).attr('title');
+		        $(this).data('tipText', title).removeAttr('title');
+		        $('<p class="tooltip"></p>')
+		        .text(title)
+		        .appendTo('body')
+		        .fadeIn('slow');
+		}, function() {
+		        // Hover out code
+		        $(this).attr('title', $(this).data('tipText'));
+		        $('.tooltip').remove();
+		}).mousemove(function(e) {
+		        var mousex = e.pageX + 20; //Get X coordinates
+		        var mousey = e.pageY + 10; //Get Y coordinates
+		        $('.tooltip')
+		        .css({ top: mousey, left: mousex })
+		});
+		});
+	</script>
+
+</body> 
+</html> 
